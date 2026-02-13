@@ -1,0 +1,8 @@
+checks for fct_orders:
+  - missing_count(order_id) = 0
+  - duplicate_count(order_id) = 0
+  - min(order_amount) >= 0
+
+checks for dim_customers:
+  - missing_count(customer_id) = 0
+  - duplicate_count(customer_id) = 0

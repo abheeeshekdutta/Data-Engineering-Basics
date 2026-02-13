@@ -1,0 +1,5 @@
+apache-airflow>=2.10
+openlineage-airflow>=1.25
+dbt-core>=1.11
+dbt-postgres>=1.11
+soda-core>=3.5

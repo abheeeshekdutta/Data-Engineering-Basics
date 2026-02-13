@@ -1,0 +1,12 @@
+checks for stg_orders:
+  - missing_count(order_id) = 0
+  - duplicate_count(order_id) = 0
+  - missing_count(order_created_at) = 0
+
+checks for stg_customers:
+  - missing_count(customer_id) = 0
+  - duplicate_count(customer_id) = 0
+
+checks for stg_products:
+  - missing_count(product_id) = 0
+  - duplicate_count(sku) = 0

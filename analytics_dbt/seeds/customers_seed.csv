@@ -1,0 +1,3 @@
+customer_id,email,first_name,last_name,country_code,updated_at
+501,a@example.com,Ada,Lovelace,US,2026-01-01T00:00:00Z
+502,b@example.com,Grace,Hopper,US,2026-01-02T00:00:00Z

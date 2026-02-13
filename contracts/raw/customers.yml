@@ -1,0 +1,25 @@
+source: raw.customers
+owner: data_eng
+freshness_sla_minutes: 1440
+primary_key:
+  - customer_id
+columns:
+  - name: customer_id
+    type: bigint
+    nullable: false
+    unique: true
+  - name: email
+    type: text
+    nullable: false
+  - name: first_name
+    type: text
+    nullable: true
+  - name: last_name
+    type: text
+    nullable: true
+  - name: country_code
+    type: text
+    nullable: true
+  - name: updated_at
+    type: timestamp
+    nullable: false

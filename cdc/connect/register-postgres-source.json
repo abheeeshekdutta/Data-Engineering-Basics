@@ -1,0 +1,17 @@
+{
+  "name": "postgres-orders-source",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "analytics",
+    "topic.prefix": "analytics",
+    "table.include.list": "raw.orders",
+    "slot.name": "orders_slot",
+    "publication.name": "orders_publication",
+    "decimal.handling.mode": "string"
+  }
+}

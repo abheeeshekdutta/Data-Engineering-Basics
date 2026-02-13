@@ -1,0 +1,3 @@
+product_id,sku,category,unit_price,updated_at
+2001,SKU-001,Electronics,49.99,2026-01-01T00:00:00Z
+2002,SKU-002,Home,19.99,2026-01-02T00:00:00Z

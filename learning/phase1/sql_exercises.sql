@@ -1,0 +1,38 @@
+-- Phase 1: Advanced SQL Exercises (E-commerce)
+-- Complete 25+ exercises and store answers in a separate solutions file.
+
+-- Setup assumptions:
+-- raw.orders(order_id, customer_id, order_created_at, order_status, total_amount, ingested_at)
+-- raw.customers(customer_id, email, country_code, updated_at)
+-- raw.events(event_id, customer_id, session_id, event_name, event_time)
+
+-- 01. Daily order count and revenue for last 30 days.
+-- 02. Weekly gross revenue and moving 4-week average.
+-- 03. Top 10 customers by lifetime spend.
+-- 04. Refund rate by week.
+-- 05. Average order value by country.
+-- 06. First purchase date per customer.
+-- 07. Days between first and second purchase per customer.
+-- 08. Retention: customers ordering in consecutive months.
+-- 09. Cohort revenue by customer first-order month.
+-- 10. Null and duplicate key audit for orders.
+-- 11. Late-arriving order detector (`ingested_at` lag from `order_created_at`).
+-- 12. Detect status regressions (e.g., completed -> pending).
+-- 13. 95th percentile order amount by month.
+-- 14. Z-score anomaly flag for daily revenue.
+-- 15. Session-to-order conversion using events + orders.
+-- 16. Funnel steps: view -> add_to_cart -> checkout -> purchase.
+-- 17. Customer country normalization fallback logic.
+-- 18. Rolling 7-day active customers.
+-- 19. Revenue share by top 20 percent customers.
+-- 20. Rank products by category revenue contribution.
+-- 21. Backfill-safe incremental extraction query by watermark.
+-- 22. Query plan comparison before and after index.
+-- 23. Build SCD Type 2 style customer change history query.
+-- 24. Reconciliation query: raw vs mart order counts.
+-- 25. Reconciliation query: raw vs mart revenue totals.
+-- 26. Gap detection for missing dates in daily metrics table.
+-- 27. Duplicate event detection by event_id + event_time.
+-- 28. CDC compatibility check for nullable added column.
+-- 29. Build a surrogate key for order line items.
+-- 30. Create materialized view candidate and refresh strategy.

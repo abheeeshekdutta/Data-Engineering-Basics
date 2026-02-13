@@ -1,0 +1,25 @@
+source: raw.orders
+owner: data_eng
+freshness_sla_minutes: 120
+primary_key:
+  - order_id
+columns:
+  - name: order_id
+    type: bigint
+    nullable: false
+    unique: true
+  - name: customer_id
+    type: bigint
+    nullable: false
+  - name: order_created_at
+    type: timestamp
+    nullable: false
+  - name: order_status
+    type: text
+    nullable: false
+  - name: total_amount
+    type: numeric(12,2)
+    nullable: false
+  - name: ingested_at
+    type: timestamp
+    nullable: false

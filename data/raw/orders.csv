@@ -1,0 +1,4 @@
+order_id,customer_id,order_created_at,order_status,total_amount
+1001,501,2026-01-01T10:00:00Z,completed,120.50
+1002,502,2026-01-01T11:00:00Z,completed,89.99
+1003,501,2026-01-03T09:00:00Z,refunded,120.50

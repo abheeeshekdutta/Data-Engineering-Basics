@@ -1,0 +1,23 @@
+source: raw.products
+owner: analytics_eng
+freshness_sla_minutes: 1440
+primary_key:
+  - product_id
+columns:
+  - name: product_id
+    type: bigint
+    nullable: false
+    unique: true
+  - name: sku
+    type: text
+    nullable: false
+    unique: true
+  - name: category
+    type: text
+    nullable: true
+  - name: unit_price
+    type: numeric(10,2)
+    nullable: false
+  - name: updated_at
+    type: timestamp
+    nullable: false

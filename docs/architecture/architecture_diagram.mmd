@@ -1,0 +1,12 @@
+flowchart LR
+  A[Source APIs and CSV Files] --> B[Ingestion Python Framework]
+  B --> C[(PostgreSQL raw schema)]
+  C --> D[dbt Core Models]
+  D --> E[(marts schema)]
+  E --> F[Superset Dashboards]
+  C --> G[Debezium Connector]
+  G --> H[Kafka]
+  D --> I[Airflow DAG Orchestration]
+  I --> J[Soda Quality Gates]
+  I --> K[OpenLineage Events]
+  K --> L[Marquez Lineage Graph]

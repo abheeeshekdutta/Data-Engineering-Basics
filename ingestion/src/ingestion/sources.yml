@@ -1,0 +1,14 @@
+sources:
+  - name: orders_csv
+    type: csv
+    path: data/raw/orders.csv
+    target_table: raw.orders
+    mode: incremental
+    cursor_field: order_created_at
+
+  - name: products_csv
+    type: csv
+    path: data/raw/products.csv
+    target_table: raw.products
+    mode: incremental
+    cursor_field: updated_at

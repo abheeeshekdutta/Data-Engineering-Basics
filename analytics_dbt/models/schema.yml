@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests: [not_null]
+      - name: order_created_at
+        tests: [not_null]
+
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: email
+        tests: [not_null]
+
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+
+  - name: fct_orders
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: order_amount
+        tests:
+          - not_null
+
+exposures:
+  - name: ecommerce_kpis_dashboard
+    type: dashboard
+    maturity: medium
+    owner:
+      name: analytics_team
+      email: analytics@example.com
+    depends_on:
+      - ref('fct_orders')
+      - ref('dim_customers')

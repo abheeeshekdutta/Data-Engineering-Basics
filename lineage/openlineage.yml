@@ -1,0 +1,8 @@
+transport:
+  type: http
+  url: http://localhost:5000/api/v1/lineage
+
+namespace: ecommerce_analytics_local
+
+airflow:
+  disabled: false

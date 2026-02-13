@@ -1,0 +1,5 @@
+checks for raw.orders:
+  - freshness(order_created_at) < 2h
+
+checks for raw.events:
+  - freshness(event_time) < 1h

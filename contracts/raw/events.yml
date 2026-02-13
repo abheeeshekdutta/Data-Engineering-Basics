@@ -1,0 +1,25 @@
+source: raw.events
+owner: analytics_eng
+freshness_sla_minutes: 60
+primary_key:
+  - event_id
+columns:
+  - name: event_id
+    type: text
+    nullable: false
+    unique: true
+  - name: customer_id
+    type: bigint
+    nullable: true
+  - name: session_id
+    type: text
+    nullable: true
+  - name: event_name
+    type: text
+    nullable: false
+  - name: event_time
+    type: timestamp
+    nullable: false
+  - name: payload_json
+    type: jsonb
+    nullable: true
